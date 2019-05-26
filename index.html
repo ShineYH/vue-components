@@ -26,8 +26,18 @@
 </head>
 <body>
   <div id="app">
-    <g-button></g-button>
+    <g-button icon="search" :loading="true" icon-position="right" >
+      设置
+    </g-button>
+    <g-button icon="search" :disabled="loading" :loading="loading" icon-position="left" @click="loading = !loading">
+        设置
+    </g-button>
+    <g-button-group>
+      <g-button icon="arrow-left">上一页</g-button>
+      <g-button icon="arrow-right">下一页</g-button>
+    </g-button-group>
   </div>
   <script src="./src/app.js"></script>
+  <script src="//at.alicdn.com/t/font_1184180_646c23ur8dp.js"></script>
 </body>
 </html>
