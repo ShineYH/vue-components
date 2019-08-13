@@ -1,6 +1,7 @@
 <template>
   <div class="input-wrap" :class="{error}">
-    <input type="text" :disabled="disabled" :value="value" :readonly="readonly">
+    <input type="text" :disabled="disabled" :value="value" :readonly="readonly"
+    @change="change" @input="input">
     <template v-if="error">
       <Icon name="error" class="icon-error"></Icon>
       <span class="error-message">{{error}}</span>
@@ -29,6 +30,14 @@ export default {
     }
   },
   components: { Icon },
+  methods: {
+    change(event) {
+      this.$emit('change', event.target.value)
+    },
+    input(event) {
+      this.$emit('change', event.target.value)
+    }
+  }
 
 }
 </script>
