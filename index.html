@@ -22,10 +22,20 @@
     #app {
       margin: 20px;
     }
+    .slpit {
+      width: 100%;
+      height: 25px;
+    }
   </style>
 </head>
 <body>
   <div id="app">
+    <g-input value="13243"></g-input>
+    <g-input value="13243" disabled></g-input>
+    <g-input value="13243" readonly></g-input>
+    <g-input value="13243" error="输入错误"></g-input>
+    <div class="slpit"></div>
+
     <g-button icon="search" :loading="true" icon-position="right" >
       设置
     </g-button>
@@ -37,7 +47,10 @@
       <g-button icon="arrow-right">下一页</g-button>
     </g-button-group>
   </div>
+  <div id="test"></div>
   <script src="./src/app.js"></script>
-  <script src="//at.alicdn.com/t/font_1184180_646c23ur8dp.js"></script>
+  <script src="//at.alicdn.com/t/font_1184180_lqblxf2erm.js"></script>
+  <script>
+  </script>
 </body>
 </html>

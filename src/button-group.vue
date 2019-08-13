@@ -7,6 +7,7 @@
 
 <script>
 export default {
+  name: 'gGroupButton',
   data() {
     return {
     };

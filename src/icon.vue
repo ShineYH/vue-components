@@ -7,6 +7,7 @@
 
 <script>
 export default {
+  name: 'gIcon',
   props: ['name']
 }
 </script>
