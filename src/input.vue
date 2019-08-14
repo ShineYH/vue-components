@@ -32,10 +32,10 @@ export default {
   components: { Icon },
   methods: {
     change(event) {
-      this.$emit('change', event.target.value)
+      this.$emit('change', event.target.value);
     },
     input(event) {
-      this.$emit('change', event.target.value)
+      this.$emit('input', event.target.value);
     }
   }
 
