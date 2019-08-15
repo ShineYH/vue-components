@@ -25,11 +25,37 @@
     .slpit {
       width: 100%;
       height: 25px;
+      border-top: 1px solid #999;
+      margin: 20px 0 10px;
+      color: red;
+    }
+    .layout-demo {
+      height: 500px;
+    }
+    .demo {
+      border:1px solid #666;
+      min-height: 100px;
     }
   </style>
 </head>
 <body>
   <div id="app">
+    <div class="slpit">默认布局layout</div>
+    <g-layout class="layout-demo">
+      <g-slider class="demo">slider</g-slider>
+      <g-layout>
+        <g-header class="demo">header</g-header>
+        <g-layout class="demo">
+          <g-slider class="demo">slider</g-slider>
+          <g-content class="demo">content</g-content>
+        </g-layout>
+        <g-footer class="demo">footer</g-footer>
+      </g-layout>
+    </g-layout>
+
+
+    <div class="slpit"> 栅格布局</div>
+
     <g-row gutter=10>
       <g-col span=12>hhhh</g-col>
       <g-col span=12>aaaa</g-col>
@@ -40,14 +66,15 @@
     </g-row>
 
 
-    <div class="slpit"></div>
+    <div class="slpit">输入框</div>
 
     <g-input value="13243"></g-input>
     <g-input value="13243" disabled></g-input>
     <g-input value="13243" readonly></g-input>
     <g-input value="13243" error="输入错误"></g-input>
-    <div class="slpit"></div>
 
+
+    <div class="slpit">按钮</div>
     <g-button icon="search" :loading="true" icon-position="right" >
       设置
     </g-button>
