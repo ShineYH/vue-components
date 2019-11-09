@@ -14,7 +14,6 @@ export default {
   },
   mounted() {
     this.$children.forEach(vm => {
-      console.info(vm);
       if(vm.$options.name === 'gSlider') {
         this.hasSlider = true;
       }
